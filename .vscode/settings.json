@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"guiddef.h": "c",
+		"rpcdce.h": "c",
+		"combaseapi.h": "c",
+		"apisetcconv.h": "c",
+		"random": "c",
+		"stat.h": "c"
+	}
+}
