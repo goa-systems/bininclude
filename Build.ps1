@@ -1,3 +1,8 @@
-Get-ChildItem -Path "." | Where-Object {$_.Name -match "(.*)\.c"} | ForEach-Object {
-	Start-Process -FilePath "gcc.exe" -ArgumentList @("-Wall", "-ansi", "-pedantic", "-c", "-g", "-o", "out\$($_.BaseName).o", "$($_.FullName)") -NoNewWindow -Wait
+Get-ChildItem -Path "src" | Where-Object {$_.Name -match "(.*)\.c"} | ForEach-Object {
+	
+	$Source = "$($_.FullName)"
+	$Destination = "out\$($_.BaseName).o"
+
+	Write-Host -Object "Building ${Source} into ${Destination}"
+	Start-Process -FilePath "gcc.exe" -ArgumentList @("-Wall", "-ansi", "-pedantic", "-c", "-g", "-o", "${Destination}", "${Source}") -NoNewWindow -Wait
 }
