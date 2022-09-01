@@ -9,6 +9,7 @@
                 "-o",
                 "out\\main.exe",
                 "out\\main.o",
+                "out\\fileintegrator.o",
                 "out\\binary.o",
                 "-lole32",
             ],
@@ -31,16 +32,10 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe build main",
-            "command": "${env:MSYS2_HOME}\\mingw64\\bin\\gcc.exe",
+            "command": "pwsh",
             "args": [
-                "-Wall",
-                "-ansi",
-                "-pedantic",
-                "-c",
-                "-g",
-                "-o",
-                "out\\main.o",
-                "main.c"
+                "-File",
+                "Build.ps1"
             ],
             "options": {
                 "cwd": "${workspaceFolder}",
