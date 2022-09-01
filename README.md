@@ -31,7 +31,7 @@ ${env:MSYS2_HOME}\mingw64\bin\nm out\binary.o
 0000000000000000 D _binary_binres_test_bin_start
 ```
 
-4. take the start, end and size names and change lines 6, 7 and 8 in the file `main.c` accordingly.
+4. Take the start, end and size names and change lines 6, 7 and 8 in the file `main.c` accordingly.
 5. Build the application by running [CRTL]+[SHIFT]+[B]
 6. Run the application `out/main.exe` and open the directory printed on the commandline.
 7. You will find your bindary file in this directory.
