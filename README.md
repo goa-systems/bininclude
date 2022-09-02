@@ -2,6 +2,18 @@
 
 This example shows how to integrate binary resources into a exe file and extract them to the temporary directory.
 
+## Files and folders
+
+|File or folder name|Description|
+|-|-|
+|Build.ps1|Builds the c files and requires the environment variable `%MSYS2_HOME%` to be set correctly.|
+|Link.ps1|Links the generated object files and requires the environment variable `%MSYS2_HOME%` to be set correctly.|
+|Prepare.ps1|Deletes the folder `out` if exists and creates it new.|
+|.vscode|Contains the [Visual Studio Code](https://code.visualstudio.com) configuration files for building, launching and environmental properties.|
+|binres|Contains **bin**ary **res**ources.|
+|out|Contains generated output like objects and executables.|
+|src|Contains source and header files.|
+
 ## Goal
 
 Some times applications written in Java or .NET require certain frameworks to be installed in order run. This project gives the user the ability to integrate installers into a single exectuable file, extract them and launch them after extraction. Afterwards the application can be extracted and launched by the same logic. The goal is to provide a boilerplate and show with the file `binres/test.bin` how it is integrated, recognized and extracted. This application is to be run on the Windows operating system.
